@@ -80,7 +80,7 @@ if [ "${do_setup}" == "true" ]; then
     ./xmlchange PIO_NETCDF_FORMAT="64bit_data"
 
     # Change timestep
-    ./xmlchange ATM_NCPL=288
+    ./xmlchange ATM_NCPL=720
 
     # Change map type for LND2ATM maps
     ./xmlchange LND2ATM_FMAPTYPE="X"
@@ -122,7 +122,7 @@ EOF
     se_ftype              = 4 
 
     ! Set timesteps
-    se_nsplit             = 30
+    se_nsplit             = 12  ! Set for a 10s timestep
     rsplit                = 1
     qsplit                = 1
     se_limiter_option     = 9  
